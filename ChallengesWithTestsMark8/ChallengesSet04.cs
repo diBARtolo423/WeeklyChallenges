@@ -97,19 +97,21 @@ namespace ChallengesWithTestsMark8
 
         public int Factorial(int number)
         {
-            var fact = 1;
+            //var fact = 1;
 
-            if (number < 0)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
+            //if (number < 0)
+            //{
+            //    throw new ArgumentOutOfRangeException();
+            //}
 
-            for (int i = number; i > 0; i--)
-            {
-                fact *= i;
-            }
+            //for (int i = number; i > 0; i--)
+            //{
+            //    fact *= i;
+            //}
 
-            return fact;
+            //return fact;
+
+            return (number == 0) ? 1 : Enumerable.Range(1, number).Aggregate((f, s) => f * s);
         }
     }
 }
